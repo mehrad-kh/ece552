@@ -1,0 +1,208 @@
+In cycle 1 fetch Index 0 queue size 0 
+1) Dispatch:    lw        r16,0(r29)	1	0	0	0	1
+FU is EMPTY
+IFQ is NOT EMPTY
+In cycle 2 fetch Index 1 queue size 1 
+2) Issue:    lw        r16,0(r29)	1	2	0	0	1
+1) Dispatch:    lui       r28,0x1003	2	0	0	0	2
+FU is EMPTY
+IFQ is NOT EMPTY
+In cycle 3 fetch Index 2 queue size 1 
+Aboutt to Exec  --> lw        r16,0(r29)	1	2	0	0	1
+3) Execute  INT in 0:      lw        r16,0(r29)	1	2	3	0	1
+2) Issue:    lui       r28,0x1003	2	3	0	0	2
+1) Dispatch:    addiu     r28,r28,20912	3	0	0	0	3
+FUInt is NOT EMPTY
+lw        r16,0(r29)	1	2	3	0	1
+In cycle 4 fetch Index 3 queue size 1 
+Aboutt to Exec  --> lw        r16,0(r29)	1	2	3	0	1
+Aboutt to Exec  --> lui       r28,0x1003	2	3	0	0	2
+3) Execute  INT in 1:      lui       r28,0x1003	2	3	4	0	2
+2) Issue:    addiu     r28,r28,20912	3	4	0	0	3
+1) Dispatch:    addiu     r17,r29,4	4	0	0	0	4
+FUInt is NOT EMPTY
+lw        r16,0(r29)	1	2	3	0	1
+In cycle 5 fetch Index 4 queue size 1 
+2) Issue:    addiu     r17,r29,4	4	5	0	0	4
+1) Dispatch:    addiu     r3,r17,4	5	0	0	0	5
+FUInt is NOT EMPTY
+lw        r16,0(r29)	1	2	3	0	1
+In cycle 6 fetch Index 5 queue size 1 
+Not Issued
+1) Dispatch:    sll       r2,r16,2	6	0	0	0	6
+FUInt is NOT EMPTY
+lw        r16,0(r29)	1	2	3	0	1
+In cycle 7 fetch Index 6 queue size 2 
+4) WriteBack:        lw        r16,0(r29)	1	2	3	7	1
+Aboutt to Exec  --> lui       r28,0x1003	2	3	4	0	2
+Aboutt to Exec  --> addiu     r28,r28,20912	3	4	0	0	3
+Aboutt to Exec  --> addiu     r17,r29,4	4	5	0	0	4
+3) Execute  INT in 0:      addiu     r17,r29,4	4	5	7	0	4
+2) Issue:    addiu     r3,r17,4	5	7	0	0	5
+1) Dispatch:    addu      r3,r3,r2	7	0	0	0	7
+FUInt is NOT EMPTY
+addiu     r17,r29,4	4	5	7	0	4
+In cycle 8 fetch Index 7 queue size 2 
+4) WriteBack:        lui       r28,0x1003	2	3	4	8	2
+Aboutt to Exec  --> addiu     r28,r28,20912	3	4	0	0	3
+Aboutt to Exec  --> addiu     r17,r29,4	4	5	7	0	4
+Aboutt to Exec  --> addiu     r3,r17,4	5	7	0	0	5
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+lui       r28,0x1003	2	3	4	8	2
+addiu     r28,r28,20912	3	4	0	0	3
+2) Issue:    sll       r2,r16,2	6	8	0	0	6
+1) Dispatch:    addu      r18,r0,r3	8	0	0	0	8
+FUInt is NOT EMPTY
+addiu     r17,r29,4	4	5	7	0	4
+In cycle 9 fetch Index 8 queue size 2 
+Aboutt to Exec  --> addiu     r28,r28,20912	3	4	0	0	3
+3) Execute  INT in 1:      addiu     r28,r28,20912	3	4	9	0	3
+Not Issued
+1) Dispatch:    sw        r18,-21500(r28)	9	0	0	0	9
+FUInt is NOT EMPTY
+addiu     r17,r29,4	4	5	7	0	4
+In cycle 10 fetch Index 9 queue size 3 
+Not Issued
+1) Dispatch:    addiu     r29,r29,-24	10	0	0	0	10
+FUInt is NOT EMPTY
+addiu     r17,r29,4	4	5	7	0	4
+In cycle 11 fetch Index 10 queue size 4 
+4) WriteBack:        addiu     r17,r29,4	4	5	7	11	4
+Aboutt to Exec  --> addiu     r28,r28,20912	3	4	9	0	3
+Aboutt to Exec  --> addiu     r3,r17,4	5	7	0	0	5
+Aboutt to Exec  --> sll       r2,r16,2	6	8	0	0	6
+3) Execute  INT in 0:      sll       r2,r16,2	6	8	11	0	6
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+addiu     r17,r29,4	4	5	7	11	4
+addiu     r3,r17,4	5	7	0	0	5
+2) Issue:    addu      r3,r3,r2	7	11	0	0	7
+FUInt is NOT EMPTY
+sll       r2,r16,2	6	8	11	0	6
+In cycle 12 fetch Index 11 queue size 3 
+Not Issued
+FUInt is NOT EMPTY
+sll       r2,r16,2	6	8	11	0	6
+In cycle 13 fetch Index 11 queue size 3 
+4) WriteBack:        addiu     r28,r28,20912	3	4	9	13	3
+Aboutt to Exec  --> addiu     r3,r17,4	5	7	0	0	5
+3) Execute  INT in 1:      addiu     r3,r17,4	5	7	13	0	5
+2) Issue:    addu      r18,r0,r3	8	13	0	0	8
+FUInt is NOT EMPTY
+sll       r2,r16,2	6	8	11	0	6
+In cycle 14 fetch Index 11 queue size 2 
+Not Issued
+FUInt is NOT EMPTY
+sll       r2,r16,2	6	8	11	0	6
+In cycle 15 fetch Index 11 queue size 2 
+4) WriteBack:        sll       r2,r16,2	6	8	11	15	6
+Aboutt to Exec  --> addiu     r3,r17,4	5	7	13	0	5
+Aboutt to Exec  --> addu      r3,r3,r2	7	11	0	0	7
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+sll       r2,r16,2	6	8	11	15	6
+addu      r3,r3,r2	7	11	0	0	7
+2) Issue:    sw        r18,-21500(r28)	9	15	0	0	9
+FUInt is NOT EMPTY
+addiu     r3,r17,4	5	7	13	0	5
+In cycle 16 fetch Index 11 queue size 1 
+Aboutt to Exec  --> addiu     r3,r17,4	5	7	13	0	5
+Aboutt to Exec  --> addu      r3,r3,r2	7	11	0	0	7
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+Not Issued
+FUInt is NOT EMPTY
+addiu     r3,r17,4	5	7	13	0	5
+In cycle 17 fetch Index 11 queue size 1 
+4) WriteBack:        addiu     r3,r17,4	5	7	13	17	5
+Aboutt to Exec  --> addu      r3,r3,r2	7	11	0	0	7
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+addiu     r3,r17,4	5	7	13	17	5
+addu      r3,r3,r2	7	11	0	0	7
+2) Issue:    addiu     r29,r29,-24	10	17	0	0	10
+FU is EMPTY
+IFQ is EMPTY
+RSInt 0 is NOT EMPTY
+addu      r3,r3,r2	7	11	0	0	7
+In cycle 18 fetch Index 11 queue size 0 
+Aboutt to Exec  --> addu      r3,r3,r2	7	11	0	0	7
+3) Execute  INT in 0:      addu      r3,r3,r2	7	11	18	0	7
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+Aboutt to Exec  --> addiu     r29,r29,-24	10	17	0	0	10
+3) Execute  INT in 1:      addiu     r29,r29,-24	10	17	18	0	10
+FUInt is NOT EMPTY
+addu      r3,r3,r2	7	11	18	0	7
+In cycle 19 fetch Index 11 queue size 0 
+FUInt is NOT EMPTY
+addu      r3,r3,r2	7	11	18	0	7
+In cycle 20 fetch Index 11 queue size 0 
+FUInt is NOT EMPTY
+addu      r3,r3,r2	7	11	18	0	7
+In cycle 21 fetch Index 11 queue size 0 
+FUInt is NOT EMPTY
+addu      r3,r3,r2	7	11	18	0	7
+In cycle 22 fetch Index 11 queue size 0 
+4) WriteBack:        addu      r3,r3,r2	7	11	18	22	7
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+Aboutt to Exec  --> addiu     r29,r29,-24	10	17	18	0	10
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+addu      r3,r3,r2	7	11	18	22	7
+addu      r18,r0,r3	8	13	0	0	8
+FUInt is NOT EMPTY
+addiu     r29,r29,-24	10	17	18	0	10
+In cycle 23 fetch Index 11 queue size 0 
+4) WriteBack:        addiu     r29,r29,-24	10	17	18	23	10
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	0	0	8
+3) Execute  INT in 0:      addu      r18,r0,r3	8	13	23	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+FUInt is NOT EMPTY
+addu      r18,r0,r3	8	13	23	0	8
+In cycle 24 fetch Index 11 queue size 0 
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	23	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+FUInt is NOT EMPTY
+addu      r18,r0,r3	8	13	23	0	8
+In cycle 25 fetch Index 11 queue size 0 
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	23	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+FUInt is NOT EMPTY
+addu      r18,r0,r3	8	13	23	0	8
+In cycle 26 fetch Index 11 queue size 0 
+Aboutt to Exec  --> addu      r18,r0,r3	8	13	23	0	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+FUInt is NOT EMPTY
+addu      r18,r0,r3	8	13	23	0	8
+In cycle 27 fetch Index 11 queue size 0 
+4) WriteBack:        addu      r18,r0,r3	8	13	23	27	8
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+YOOOOOOOOOOOOOOOOOOOOOOOOOOOOHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+addu      r18,r0,r3	8	13	23	27	8
+sw        r18,-21500(r28)	9	15	0	0	9
+FU is EMPTY
+IFQ is EMPTY
+RSInt 0 is NOT EMPTY
+sw        r18,-21500(r28)	9	15	0	0	9
+In cycle 28 fetch Index 11 queue size 0 
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	0	0	9
+3) Execute  INT in 0:      sw        r18,-21500(r28)	9	15	28	0	9
+FUInt is NOT EMPTY
+sw        r18,-21500(r28)	9	15	28	0	9
+In cycle 29 fetch Index 11 queue size 0 
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	28	0	9
+FUInt is NOT EMPTY
+sw        r18,-21500(r28)	9	15	28	0	9
+In cycle 30 fetch Index 11 queue size 0 
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	28	0	9
+FUInt is NOT EMPTY
+sw        r18,-21500(r28)	9	15	28	0	9
+In cycle 31 fetch Index 11 queue size 0 
+Aboutt to Exec  --> sw        r18,-21500(r28)	9	15	28	0	9
+FUInt is NOT EMPTY
+sw        r18,-21500(r28)	9	15	28	0	9
+In cycle 32 fetch Index 11 queue size 0 
+FU is EMPTY
+IFQ is EMPTY
+RS is EMPTY
